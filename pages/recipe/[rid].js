@@ -1,6 +1,6 @@
 import { request } from "../../lib/datocms";
 import styles from "../../styles/recipe.module.scss";
-import Head from "next/Head";
+import Head from "next/head";
 import { Image } from "react-datocms";
 
 

@@ -1,7 +1,7 @@
 import { request } from '../lib/datocms'
 import styles from "../styles/home.module.scss"
 import Link from 'next/link'
-import Head  from 'next/Head'
+import Head  from 'next/head'
 import { Image } from "react-datocms";
 
 const HOMEPAGE_QUERY = `
