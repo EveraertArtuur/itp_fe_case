@@ -3,7 +3,6 @@ import styles from "../../styles/recipe.module.scss";
 import Head from "next/head";
 import { Image } from "react-datocms";
 
-
 const RECIPE_QUERY = `
 query MyQuery($id:ItemId) {
   recipe(filter: {id: {eq: $id}}) {
@@ -73,7 +72,7 @@ const Recipe = (prop) => {
   const rec = prop.data.recipe;
   const hour = Math.floor(rec.cookingtimeminutes / 60);
   const min = rec.cookingtimeminutes % 60;
-  var tags =  rec.tags.split(', ');
+  var tags = rec.tags.split(", ");
 
   return (
     <div>
@@ -103,33 +102,30 @@ const Recipe = (prop) => {
               <div className="col-sm">
                 <h1>{rec.title}</h1>
                 <h2>Aantal personen: {rec.servers}</h2>
-               
+
                 <h2>
                   {hour > 0 ? `${hour} uur` : ""} {min} minuten{" "}
                 </h2>
-                
+
                 <div className={styles.tags}>
-                <div className= "row justify-content-center">{
-                    tags.map((tag) => (
-                      <div key={tag}  className="col-xs">
+                  <div className="row justify-content-center">
+                    {tags.map((tag) => (
+                      <div key={tag} className="col-xs">
                         <p className={styles.tag}>{tag}</p>
                       </div>
-                       
-                    ))             
-                  }</div>
-                  </div>  
-                
-               
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div className={styles.recipeBody}>
             <div className="row">
-              <div className="col-3">
+              <div className="col-auto">
                 <div className={styles.ingredientsList}>
                   <h2>Ingredienten</h2>
                   {rec.ingredients.map((ing) => (
-                    <p key={ing.name} >
+                    <p key={ing.name}>
                       {ing.amount} {ing.unite} {ing.name}
                     </p>
                   ))}
@@ -137,15 +133,15 @@ const Recipe = (prop) => {
               </div>
               <div className="col-md">
                 <h2>Bereiding</h2>
-                {
-                  rec.methodesteps.map((step) => (
-                  <div key={step.id} >
-                    {step.istitle != true ? <p>{step.steptext}  </p> : <p className={styles.stepSubTitle}>{step.steptext} </p>}
+                {rec.methodesteps.map((step) => (
+                  <div key={step.id}>
+                    {step.istitle != true ? (
+                      <p>{step.steptext} </p>
+                    ) : (
+                      <p className={styles.stepSubTitle}>{step.steptext} </p>
+                    )}
                   </div>
-
-                    )
-                  )
-                }
+                ))}
               </div>
             </div>
             <div className={styles.subimages}>

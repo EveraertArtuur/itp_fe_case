@@ -7,7 +7,7 @@
   margin-top: 1em;
   background-color: #201551;
   border-radius: 2em 2em 0 0;
-  color: #C7E2E9;
+  color: #c7e2e9;
   text-align: center;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .recipepage .header .tags .tag {
-  background-color: #C7E2E9;
+  background-color: #c7e2e9;
   color: #201551;
   border-radius: 2em;
   padding: 0 0.25em 0 0.25em;
@@ -37,7 +37,7 @@
 
 .recipepage .recipeBody {
   padding: 1em;
-  background-color: #C7E2E9;
+  background-color: #c7e2e9;
   border-radius: 0 0 2em 2em;
 }
 
@@ -47,7 +47,7 @@
 
 .recipepage .recipeBody .ingredientsList p {
   margin: 0em;
-  font-size: small;
+  font-size: medium;
 }
 
 .recipepage .recipeBody .stepSubTitle {
@@ -61,6 +61,6 @@
 
 .recipepage .recipeBody .subimages .subImageCard {
   margin: 1em;
-  border-radius: 2em 0 2em  0;
+  border-radius: 2em 0 2em 0;
 }
 /*# sourceMappingURL=recipe.module.css.map */

@@ -1,80 +1,69 @@
-$primaryColor : #EFF7FA;
+$primaryColor: #eff7fa;
 $secondaryColor1: #201551;
-$secondaryColor2: #C7E2E9;
+$secondaryColor2: #c7e2e9;
 
+.recipepage {
+  margin: auto;
 
-.recipepage{
+  margin-bottom: 1em;
 
-    margin: auto;
-    
-    margin-bottom: 1em;
-   
-    .header{
-        margin-top: 1em;
-        background-color: $secondaryColor1;
-        border-radius: 2em 2em 0 0 ;
-        color: $secondaryColor2;
-        text-align: center;
-        
-        h1{
-            margin-bottom: 0.5em;
-        }
+  .header {
+    margin-top: 1em;
+    background-color: $secondaryColor1;
+    border-radius: 2em 2em 0 0;
+    color: $secondaryColor2;
+    text-align: center;
 
-        h2{
-            font-size: medium;
-        }
-        
-        .imageCard{
-            border-radius: 2em 0 2em 0 ;
-            
-        }
-        .tags{
-            
-            .tag{
-                
-                background-color: $secondaryColor2;
-                color: $secondaryColor1;
-                border-radius: 2em;
-               padding: 0 0.25em 0 0.25em;
-               margin-right: 0.3em;
-               
-                
-            }
-            .tag:hover{
-             font-weight: bold;
-            }
-           
-        }
-
+    h1 {
+      margin-bottom: 0.5em;
     }
 
-    .recipeBody{
-        padding: 1em;
+    h2 {
+      font-size: medium;
+    }
+
+    .imageCard {
+      border-radius: 2em 0 2em 0;
+    }
+    .tags {
+      .tag {
         background-color: $secondaryColor2;
-        border-radius: 0 0 2em 2em ;
-        
-        .ingredientsList{
-            margin-bottom: 1em;
-            p{
-                margin: 0em;
-                font-size: small;
-            }
-
-        }
-        
-        .stepSubTitle{
-            font-weight: bold;
-            margin-top: 1em;
-            
-        }
-        .subimages{
-            margin-top: 1em;
-            .subImageCard{
-               margin: 1em;
-                border-radius: 2em 0 2em  0;
-            }
-        }
-       
+        color: $secondaryColor1;
+        border-radius: 2em;
+        padding: 0 0.25em 0 0.25em;
+        margin-right: 0.3em;
+      }
+      .tag:hover {
+        font-weight: bold;
+      }
     }
-}
+  }
 
+  .recipeBody {
+    padding: 1em;
+    background-color: $secondaryColor2;
+    border-radius: 0 0 2em 2em;
+
+    .ingredientsList {
+      margin-bottom: 1em;
+      h2 {
+      }
+      p {
+        margin: 0em;
+        font-size: medium;
+      }
+    }
+
+    .stepSubTitle {
+      font-weight: bold;
+      margin-top: 1em;
+    }
+    .subimages {
+      margin-top: 1em;
+      .subImageCard {
+        margin: 1em;
+        border-radius: 2em 0 2em 0;
+      }
+    }
+  }
+}

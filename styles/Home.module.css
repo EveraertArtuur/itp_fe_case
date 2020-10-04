@@ -4,7 +4,7 @@
   border-radius: 2em;
   padding-bottom: 1em;
   margin: 0.5em;
-  color: #EFF7FA;
+  color: #eff7fa;
 }
 
 .recipeInfoCard .imageCard {
@@ -23,7 +23,7 @@
 }
 
 .recipeInfoCard a:hover {
-  color: #C7E2E9;
+  color: #c7e2e9;
   text-decoration: none;
   font-weight: bolder;
 }
