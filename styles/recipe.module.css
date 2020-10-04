@@ -1,1 +1,66 @@
-/* No CSS *//*# sourceMappingURL=recipe.module.css.map */
+.recipepage {
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.recipepage .header {
+  margin-top: 1em;
+  background-color: #201551;
+  border-radius: 2em 2em 0 0;
+  color: #C7E2E9;
+  text-align: center;
+}
+
+.recipepage .header h1 {
+  margin-bottom: 0.5em;
+}
+
+.recipepage .header h2 {
+  font-size: medium;
+}
+
+.recipepage .header .imageCard {
+  border-radius: 2em 0 2em 0;
+}
+
+.recipepage .header .tags .tag {
+  background-color: #C7E2E9;
+  color: #201551;
+  border-radius: 2em;
+  padding: 0 0.25em 0 0.25em;
+  margin-right: 0.3em;
+}
+
+.recipepage .header .tags .tag:hover {
+  font-weight: bold;
+}
+
+.recipepage .recipeBody {
+  padding: 1em;
+  background-color: #C7E2E9;
+  border-radius: 0 0 2em 2em;
+}
+
+.recipepage .recipeBody .ingredientsList {
+  margin-bottom: 1em;
+}
+
+.recipepage .recipeBody .ingredientsList p {
+  margin: 0em;
+  font-size: small;
+}
+
+.recipepage .recipeBody .stepSubTitle {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.recipepage .recipeBody .subimages {
+  margin-top: 1em;
+}
+
+.recipepage .recipeBody .subimages .subImageCard {
+  margin: 1em;
+  border-radius: 2em 0 2em  0;
+}
+/*# sourceMappingURL=recipe.module.css.map */
