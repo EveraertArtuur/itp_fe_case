@@ -1,14 +1,37 @@
 import { request } from '../lib/datocms'
-import { Image, renderMetaTags } from 'react-datocms'
-import Head from 'next/head'
+
+import Link from 'next/link'
 
 const HOMEPAGE_QUERY = `
 query MyQuery {
   homepage {
     title
     welcometext
+    recipelist {
+      id
+      updatedAt
+      tags
+      title
+      id
+      bannerimage {
+        id
+       responsiveImage(imgixParams: { fit: crop, w: 300, h: 300, auto: format }) {
+        srcSet
+        webpSrcSet
+        sizes
+        src
+        width
+        height
+        aspectRatio
+        alt
+        title
+        base64
+      }
+    }
+  }
   }
 }
+
 `
 
 export async function getStaticProps() {
@@ -26,7 +49,19 @@ export async function getStaticProps() {
 export default function Home({ data }) {
   return (
     <div>
-      {data.homepage.title}
+      <div>{data.homepage.title}</div>
+      <div>{data.homepage.welcometext}</div>
+      {
+        
+        data.homepage.recipelist.map(recipe => (
+          <article key={recipe.id}>
+            <Link href={ `/recipe/${recipe.id}`} as={`recipe/${recipe.id}`}>
+          <a>{recipe.title}</a>
+              </Link>
+           
+        </article>
+        ))
+      }
     </div>
   )
-}
+} 
