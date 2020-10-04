@@ -64,18 +64,18 @@ export default function Home({ data }) {
        </div>
        
      
-    <div className="row">
+    <div className="row justify-content-center ">
     {
        
        data.homepage.recipelist.map(recipe => (
          
-         <div key={recipe.id} className="col-sm" >
+         <div key={recipe.id} className="col-" >
            
            <div className={styles.recipeInfoCard}>
            <Image data={recipe.bannerimage.responsiveImage}  className={styles.imageCard}/>
            <h1>{recipe.title}</h1>
            <Link href={ `/recipe`} as={`recipe/${recipe.id}`}>
-           <a>check it out</a>
+           <a>bekijk het recept</a>
            </Link>
           
            </div>

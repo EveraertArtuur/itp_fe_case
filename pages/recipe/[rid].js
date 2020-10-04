@@ -100,7 +100,7 @@ const Recipe = (prop) => {
                   className={styles.imageCard}
                 />
               </div>
-              <div className="col-lg">
+              <div className="col-sm">
                 <h1>{rec.title}</h1>
                 <h2>Aantal personen: {rec.servers}</h2>
                
@@ -125,7 +125,7 @@ const Recipe = (prop) => {
           </div>
           <div className={styles.recipeBody}>
             <div className="row">
-              <div className="col-auto">
+              <div className="col-3">
                 <div className={styles.ingredientsList}>
                   <h2>Ingredienten</h2>
                   {rec.ingredients.map((ing) => (
@@ -149,7 +149,7 @@ const Recipe = (prop) => {
               </div>
             </div>
             <div className={styles.subimages}>
-              <div className="row justify-content-md-center ">
+              <div className="row justify-content-center ">
                 {rec.subimages.map((subimage) => (
                   <div key={subimage.id} className="col-auto">
                     <Image
