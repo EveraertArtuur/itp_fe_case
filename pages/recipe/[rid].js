@@ -102,10 +102,10 @@ const Recipe = (prop) => {
               </div>
               <div className="col-lg">
                 <h1>{rec.title}</h1>
-                <h2>aantal personen {rec.servers}</h2>
+                <h2>Aantal personen: {rec.servers}</h2>
                
                 <h2>
-                  {hour > 0 ? `${hour} uur en` : ""} {min} minuten{" "}
+                  {hour > 0 ? `${hour} uur` : ""} {min} minuten{" "}
                 </h2>
                 
                 <div className={styles.tags}>
