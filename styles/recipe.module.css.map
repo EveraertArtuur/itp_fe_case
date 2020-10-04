@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "recipe.module.scss"
+    ],
+    "names": [],
+    "file": "recipe.module.css"
+}

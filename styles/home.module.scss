@@ -1,0 +1,46 @@
+/*# sourceMappingURL=Home.module.css.map */
+$primaryColor : #EFF7FA;
+$secondaryColor1: #201551;
+$secondaryColor2: #C7E2E9;
+
+
+
+  .recipeInfoCard{
+    text-align: center;
+    background-color: $secondaryColor1;
+    border-radius: 2em;
+    padding-bottom: 1em;
+    margin: 0.5em;
+    
+    color: $primaryColor;
+   // box-shadow: 10px 10px 19px -8px $secondaryColor1;
+    .imageCard{
+      border-radius: 2em 2em 0em 0em ;
+      margin-bottom: 1em;
+    }
+    h1{
+      font-weight: bolder;
+      font-size: x-large;
+    }
+    a{
+      text-decoration: none;
+      font-weight: bold;
+      
+      
+    }
+    a:hover{
+      color: $secondaryColor2;
+      text-decoration: none;
+      font-weight: bolder;
+     
+    }
+  }
+  
+  .heading{
+    text-align: center;
+    color: $secondaryColor1;
+    margin-top: 1em;
+   
+  }
+
+

@@ -1,10 +1,49 @@
 import { request } from '../../lib/datocms'
+import styles from '../../styles/recipe.module.scss'
 
 const RECIPE_QUERY = `
 query MyQuery($id:ItemId) {
   recipe(filter: {id: {eq: $id}}) {
-    id
+    methode
+    tags
     title
+    servers
+    skilllevel
+    id
+    cookingtimeminutes
+    bannerimage {
+      responsiveImage(imgixParams: { fit: crop, w: 300, h: 300, auto: format }) {
+        srcSet
+        webpSrcSet
+        sizes
+        src
+        width
+        height
+        aspectRatio
+        alt
+        title
+        base64
+      }
+    }
+    ingredients {
+      amount
+      name
+      unite
+    }
+    subimages {
+     responsiveImage(imgixParams: { fit: crop, w: 300, h: 300, auto: format }) {
+        srcSet
+        webpSrcSet
+        sizes
+        src
+        width
+        height
+        aspectRatio
+        alt
+        title
+        base64
+      }
+    }
   }
 }
 `;
@@ -26,7 +65,11 @@ export async function getServerSideProps({params }) {
   const Recipe = (prop) => {
     
     
-  return <p>{prop.data.recipe.title}</p>
+  return <div>
+    <h1>
+      
+    </h1>
+  </div>
   }
 
 export default Recipe
